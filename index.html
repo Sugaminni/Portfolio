@@ -11,18 +11,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>    Alex Lu</h1>
-    <p>     Computer Science Student @ KSU</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="navbar">
+    <div class="navbar-container">
+      <h1 class="logo">ALEX LU</h1>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav class="nav-right" id="nav-menu">
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
+    <h2>FULLSTACK DEVELOPER</h2>
     <p>Hello! I'm Alex. I'm an aspiring full-stack developer from Kennesaw State University.</p>
   </section>
 
@@ -51,7 +53,7 @@
     </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>PORTFOLIO</h2>
     <ul>
       <li>
        <strong>My Cool App</strong> – <a href="https://github.com/yourgithub/cool-app">GitHub</a>
@@ -60,7 +62,7 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>CONTACT</h2>
     <p><a href="youremail@example.com">Alexhonglu@gmail.com</a></p>
   </section>
 
@@ -71,6 +73,13 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('show');
+  }
 </script>
 </body>
 </html>

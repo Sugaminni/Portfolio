@@ -25,7 +25,6 @@ body {
   section {
     padding: 3rem 1.5rem;
   }
-  
 
  /* Navbar container */
 .navbar {
@@ -59,8 +58,6 @@ body {
   box-sizing: border-box; 
 }
 
-
-
 /* Logo styling */
 .logo {
   color: #fff;
@@ -77,6 +74,7 @@ body {
   font-size: 0.95rem;
   text-decoration: none;
   transition: color 0.2s ease;
+  margin: 0.5rem 0;
 }
 
 .nav-right a:hover {
@@ -94,16 +92,17 @@ body {
 /* Responsive for mobile */
 @media (max-width: 768px) {
   .nav-right {
-    text-align: start;
-    display: flex;
+    display: none;
+    text-align: left;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 40px;
     background-color: #111723;
-    padding: 20px 15px;
-    border-radius: 20px;
+    padding: 1rem;
+    border-radius: 8px;
     gap: 10px;
+    align-items: flex-start;
   }
 
   .nav-right.show {

@@ -70,16 +70,29 @@
     <p>&copy; 2025 Alex Lu</p>
   </footer>
   
+  <!--Script to make skill icons fade up when in view-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
 
+<!--Auto closes menu when a link/button is clicked for hamburger menu-->
 <script>
   function toggleMenu() {
     const nav = document.getElementById('nav-menu');
     nav.classList.toggle('show');
   }
+
+  document.addEventListener('DOMContentLoaded' , () => {
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const nav = document.getElementById('nav-menu');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('show');
+      });
+    });
+  });
 </script>
 </body>
 </html>

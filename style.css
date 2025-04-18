@@ -221,12 +221,12 @@ body {
   /* About Section and picture*/
   .about-section {
     position: relative;
-    padding: 120px 2rem 0; /* top space for navbar */
-    background-color: #111723;
+    padding: 120px 2rem 0; 
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: visible; /* important */
+    overflow: visible; 
     min-height: 100vh;
   }
   
@@ -328,6 +328,7 @@ body {
     flex-direction: column;
     align-items: center; 
     text-align: center;
+    
   }
 
   .about-img {
@@ -336,7 +337,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-bottom: 2rem; /* Adds breathing room */
+    padding-bottom: 2rem; 
     overflow: visible; /* Ensures image isn't clipped */
   }
   

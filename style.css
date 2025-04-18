@@ -72,6 +72,13 @@ body {
   font-weight: 600;
   margin: 0;
   margin-left: 10px;
+  text-decoration: none;
+}
+
+/* Logo hover underline removal */
+.logo:hover {
+  color: #62dafb;
+  text-decoration: none;
 }
 
 /* Nav links */
@@ -272,7 +279,7 @@ body {
 }
 
 .about-text p {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   color: #e0e0e0;
 }
@@ -288,8 +295,8 @@ body {
 }
 
 .about-img img{
-  width: 350px;
-  height: 350px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
@@ -298,6 +305,7 @@ body {
 .see-work-btn {
   display: inline-block;
   margin-top: 1rem;
+  margin-bottom : 1rem;
   padding: 0.8rem 1.8rem;
   font-size: 1rem;
   font-weight: 600;
@@ -368,6 +376,7 @@ body::before {
   }
 }
 
+/* Projects Section */
 #projects {
   scroll-margin-top: 100px; 
   text-align: center;
@@ -382,6 +391,7 @@ body::before {
   margin-bottom: 0.3rem;
 }
 
+/* Contact Section */
 #contact {
   scroll-margin-top: 100px; 
   text-align: center;
@@ -395,3 +405,24 @@ body::before {
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.3rem;
 }
+
+.contact-icon {
+  font-size: 2rem;
+  color: #e0e0e0;
+  margin: 0 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+/* Shared hover scaling */
+.contact-icon:hover {
+  transform: scale(1.2);
+  text-decoration: none;
+}
+
+/* Platform-specific hover colors */
+.contact-icon:hover .fa-instagram { color: #E1306C; }
+.contact-icon:hover .fa-linkedin  { color: #0077B5; }
+.contact-icon:hover .fa-github    { color: #6e5494; }
+.contact-icon:hover .fa-facebook  { color: #1877F2; }
+.contact-icon:hover .fa-twitter   { color: #1DA1F2; }

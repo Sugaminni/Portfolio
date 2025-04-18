@@ -332,15 +332,14 @@ body {
   }
 
   .about-img {
-    margin-top: 2rem;
+    margin: 2rem auto 0 auto !important;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-bottom: 2rem; 
-    overflow: visible; /* Ensures image isn't clipped */
+    padding-bottom: 2rem;
   }
-  
+
   .about-img img {
     width: 80vw;
     max-width: 300px;
@@ -348,6 +347,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     display: block;
+    margin: 0 auto;
   }
   
   

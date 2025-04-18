@@ -219,18 +219,17 @@ body {
   }
   
   /* About Section and picture*/
-.about-section {
-  position: relative;
-  padding: 150px 2rem 0;
-  background-color: transparent #111723;
-  color: #fff;
-  display: flex;
-  align-items: flex-start;
-  height: 100vh;
-  justify-content: center;
-  overflow: hidden;
-  min-height: 600px;
-}
+  .about-section {
+    position: relative;
+    padding: 120px 2rem 0; /* top space for navbar */
+    background-color: #111723;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; /* important */
+    min-height: 100vh;
+  }
+  
 
 .section-divider {
   width: 60%;
@@ -266,6 +265,7 @@ body {
   flex: 1;
   min-width: 280px;
   max-width: 600px;
+  padding: 0 1rem;
 }
 
 .about-text h2 {
@@ -278,7 +278,7 @@ body {
 }
 
 .about-text p {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 30px;
   color: #e0e0e0;
 }
@@ -331,18 +331,25 @@ body {
   }
 
   .about-img {
-    margin: 2rem 0 0 0; 
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-bottom: 2rem; /* Adds breathing room */
+    overflow: visible; /* Ensures image isn't clipped */
   }
-
+  
   .about-img img {
-    margin: 0 auto;
+    width: 80vw;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
     display: block;
   }
-
+  
+  
   .about-text h1,
   .about-text h2 {
     font-size: 2.2rem;

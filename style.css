@@ -5,6 +5,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding-top: 35px; /* Adjust for fixed navbar height */
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
   
   /* Headings */
@@ -39,7 +45,7 @@ body {
     padding: 1rem 0; 
   }
 }
-
+/* Navbar container for desktop and mobile */
 .navbar-container {
   position: fixed;
   top: 20px;
@@ -77,7 +83,7 @@ body {
   gap: 1rem;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
-
+ /* Nav links for desktop */
 .nav-right a {
   color: #e0e0e0;
   margin-left: 1.2rem;
@@ -132,7 +138,7 @@ body {
     display: block;
   }
 }
-
+  /* Button Styling */
   button {
     background-color: #1f1f2e;
     color: #fff;
@@ -161,10 +167,11 @@ body {
     margin-top: 1rem;
   }
 
+    /* Skills Section */
   #skills {
     text-align: center;
     padding: 4rem 1rem;
-    background-color: #111723;
+    background-color: transparent#111723;
     color: #e0e0e0;
   }
   
@@ -207,18 +214,44 @@ body {
   
   /* About Section and picture*/
 .about-section {
-  padding: 5rem 2rem;
-  background-color: #0f1116;
+  position: relative;
+  padding: 150px 2rem 0;
+  background-color: transparent #111723;
   color: #fff;
   display: flex;
+  align-items: flex-start;
+  height: 100vh;
   justify-content: center;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.section-divider {
+  width: 60%;
+  height: 2px;
+  margin: 3rem auto;
+  background: linear-gradient(to right, transparent, #00eeff, transparent);
+  opacity: 0.6;
+  box-shadow: 0 0 8px #00eeff33;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  opacity: 0.05; /* Adjust this to control visibility */
+  z-index: 0;
+  pointer-events: none;
 }
 
 .about-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 6rem;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -235,7 +268,7 @@ body {
   margin-bottom: 1.5rem;
   color: #00eeff;
   line-height: 1.2;
-  margin-top: 120px;
+  
 }
 
 .about-text p {
@@ -251,7 +284,7 @@ body {
 .about-img {
   flex-shrink: 0;
   margin-left: -40px;
-  margin-top: 70px;
+  
 }
 
 .about-img img{
@@ -260,6 +293,25 @@ body {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.see-work-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00eeff;
+  border: 2px solid #00eeff;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.see-work-btn:hover {
+  background-color: #00eeff;
+  color: #111723;
+  box-shadow: 0 0 10px #00eeff88;
 }
 
 /* Responsive Design for mobile*/
@@ -291,4 +343,55 @@ body {
   .about-text p {
     font-size: 1rem;
   }
+}
+
+/* Background image for the whole page */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('images/background.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.03; 
+  z-index: -1; /* Behind all other content */
+  animation: bgScroll 60s linear infinite;
+  pointer-events: none;
+}
+
+/* Animation for background scrolling */
+@keyframes bgScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0% 100%;
+  }
+}
+
+#projects {
+  scroll-margin-top: 100px; 
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.3rem;
+}
+
+#contact {
+  scroll-margin-top: 100px; 
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.3rem;
 }

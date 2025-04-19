@@ -29,7 +29,7 @@
   <!-- Main Section -->
   <section id="about" class="about-section">
   <div class="about-content">
-    <div class="about-text" data-aos="fade-up" data-aos-delay="100"> 
+    <div class="about-text" data-aos="fade-in" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out"> 
     <h2>FULL-STACK DEVELOPER</h2>
     <p>
       Hello! I'm Alex — a Computer Science student at Kennesaw State University, 
@@ -111,29 +111,10 @@
     <p>&copy; 2025 Alex Lu</p>
   </footer>
   
-  <!--Script to make skill icons fade up when in view-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  <!-- AOS library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<!--Auto closes menu when a link/button is clicked for hamburger menu-->
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('nav-menu');
-    nav.classList.toggle('show');
-  }
-
-  document.addEventListener('DOMContentLoaded' , () => {
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    const nav = document.getElementById('nav-menu');
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('show');
-      });
-    });
-  });
-</script>
+  <!-- Hamburger Menu Scripts -->
+  <script src="scripts.js"></script>
 </body>
 </html>
